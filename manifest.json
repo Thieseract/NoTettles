@@ -1,0 +1,31 @@
+{
+  "name": "No Tettles",
+  "description": "Just say no to Tettles!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "/images/tettles16.png",
+      "32": "/images/tettles32.png",
+      "48": "/images/tettles48.png",
+      "128": "/images/tettles128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/tettles16.png",
+    "32": "/images/tettles32.png",
+    "48": "/images/tettles48.png",
+    "128": "/images/tettles128.png"
+  }
+}
